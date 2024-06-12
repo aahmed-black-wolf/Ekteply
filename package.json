@@ -1,0 +1,54 @@
+{
+  "name": "ektilpy",
+  "version": "1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "live": "next build && next start",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "preinstall": "npx only-allow bun"
+  },
+  "dependencies": {
+    "@ant-design/react-slick": "^1.1.2",
+    "@hookform/resolvers": "^3.6.0",
+    "@nextui-org/react": "^2.4.1",
+    "@tailwindcss/typography": "^0.5.13",
+    "@tanstack/react-query": "^5.45.0",
+    "@types/react-html-parser": "^2.0.6",
+    "apexcharts": "^3.49.1",
+    "axios": "^1.7.2",
+    "framer-motion": "^11.2.10",
+    "next": "^14.2.4",
+    "react": "latest",
+    "react-apexcharts": "^1.4.1",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "latest",
+    "react-hook-form": "^7.51.5",
+    "react-icons": "^5.2.1",
+    "react-international-phone": "^4.3.0",
+    "react-markdown": "^9.0.1",
+    "sharp": "^0.33.4",
+    "slick-carousel": "^1.8.1",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "@types/bun": "latest"
+  },
+  "engines": {
+    "yarn": "please-use-npm",
+    "npm": "please-use-npm",
+    "bun": ">= 1.1.0"
+  }
+}

@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*? -------------------------------------------------------------------------- */
+/*?                                Global                                      */
+/*? -------------------------------------------------------------------------- */
+
+:root {
+  --main-color-900: #029bc5;
+  --main-color-400: #5ed7f8ab;
+
+  --dark-color-900: #2f2e41;
+  --dark-color-700: #3a556a;
+  --dark-color-800: #26acc9;
+  --dark-color-400: #b3acac8f;
+
+  --error-color-900: rgb(250, 67, 67);
+
+  --light-color-900: #fff;
+  --light-color-800: #979797;
+  --light-color-700: #ffffff93;
+  --light-color-600: #f2f1fa;
+  --light-color-500: #f9fafb;
+
+  --success-color-900: #03543f;
+  --success-color-800: #def7ec;
+
+  --error-color-900: #9b1c1c;
+  --error-color-800: #fbd5d5;
+}
+
+.baloo-font {
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+* {
+  scroll-behavior: smooth;
+}
+/*? -------------------------------------------------------------------------- */
+/*?                                Global                                      */
+/*? -------------------------------------------------------------------------- */
+
+/*TODO -------------------------------------------------------------------------- */
+/*TODO                                  Hero-Wave                                 */
+/*TODO -------------------------------------------------------------------------- */
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffff;
+}
+
+.wave {
+  position: absolute;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -167px;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+}
+.wave3 {
+  right: 0;
+  width: 6400px;
+  animation: waving 7s ease infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes waving {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+/*TODO -------------------------------------------------------------------------- */
+/*TODO                                  Hero-Wave                                 */
+/*TODO -------------------------------------------------------------------------- */
+
+/*? -------------------------------------------------------------------------- */
+/*?                             Slick-Slide & Video                            */
+/*? -------------------------------------------------------------------------- */
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+::-webkit-media-controls {
+  display: none !important;
+}
+
+li.slick-active div {
+  background-color: var(--dark-color-900) !important;
+}
+
+/*? -------------------------------------------------------------------------- */
+/*?                             Slick-Slide & Video                            */
+/*? -------------------------------------------------------------------------- */
+
+/*TODO -------------------------------------------------------------------------- */
+/*TODO                                   Header                                   */
+/*TODO -------------------------------------------------------------------------- */
+
+.header-animate {
+  position: fixed;
+  z-index: 100;
+  background-color: var(--light-color-900);
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: headerAnimation 0.4s 1 ease alternate;
+}
+@keyframes headerAnimation {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/*TODO -------------------------------------------------------------------------- */
+/*TODO                                   Header                                   */
+/*TODO -------------------------------------------------------------------------- */
+
+/*? -------------------------------------------------------------------------- */
+/*?                                 Card Budget                                */
+/*? -------------------------------------------------------------------------- */
+
+.card-ribbon {
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+  left: -10px;
+  width: 114px;
+  height: 112px;
+}
+.card-ribbon span {
+  position: absolute;
+  display: block;
+  width: 160px;
+  padding: 10px 0;
+  background-color: var(--main-color-900);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  left: -35px;
+  top: 25px;
+  font-weight: 700;
+  transform: rotate(-45deg);
+}
+
+.card-ribbon::before,
+.card-ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid var(--main-color-900);
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.card-ribbon::before {
+  top: 0;
+  right: 0;
+}
+.card-ribbon::after {
+  bottom: 0;
+  left: 0;
+}
+
+/*? -------------------------------------------------------------------------- */
+/*?                                 Card Budget                                */
+/*? -------------------------------------------------------------------------- */
+
+/*TODO -------------------------------------------------------------------------- !*/
+/*TODO                   OVER WRITE Scroll Bar => NextUi                          !*/
+/*TODO -------------------------------------------------------------------------- !*/
+/* Change the background color of the scrollbar track */
+::-webkit-scrollbar {
+  background-color: var(--main-color-900);
+
+  /* Change this to the desired background color */
+}
+
+/* Change the color of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #001833;
+  /* Change this to the desired thumb color */
+}
+
+/* Change the background color of the scrollbar track */
+textarea::-webkit-scrollbar {
+  width: 0 !important;
+  /* Change this to the desired thumb color */
+}
+
+/* Change the color of the scrollbar arrows (up and down buttons) */
+::-webkit-scrollbar-button {
+  background-color: var(--dark-color-400);
+  /* Change this to the desired arrow color */
+}
+
+/* Change the color of the scrollbar corner (between the thumb and track) */
+::-webkit-scrollbar-corner {
+  background-color: var(--dark-color-400);
+  /* Change this to the desired corner color */
+}
+/*? -------------------------------------------------------------------------- !*/
+/*?                   Header Animation On Scroll                               !*/
+/*? -------------------------------------------------------------------------- !*/
+.header-scroll-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  animation: header 0.4s 1 ease forwards;
+}
+
+@keyframes header {
+  from {
+    top: -400px;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  to {
+    transform: scale(1);
+    transform-origin: top;
+    background-color: var(--light-color-900);
+  }
+}
+/*TODO -------------------------------------------------------------------------- !*/
+/*TODO                      OVER WRITE DATE  => DatePicker                       !*/
+/*TODO-------------------------------------------------------------------------- !*/
+.rdp-day_today {
+  font-weight: bold;
+  font-size: 140%;
+  border: transparent !important;
+  outline: transparent !important;
+  color: var(--primary-color-900) !important;
+}
+
+.rdp-day_range_end {
+  background-color: var(--primary-color-900) !important;
+  font-weight: 700 !important;
+}
+
+.rdp-day_range_start,
+.rdp-day_selected {
+  background-color: var(--dark-color-900) !important;
+  color: var(--light-color-900) !important;
+  font-weight: 700 !important;
+  outline-color: var(--main-color-900) !important;
+  border-color: var(--main-color-900) !important;
+}
+
+.rdp-day_range_middle {
+  background-color: var(--dark-color-400) !important;
+  outline-color: var(--dark-color-400) !important;
+  border-color: var(--dark-color-400) !important;
+  opacity: 0.8 !important;
+}
+.rdp-cell {
+  outline: 1px solid transparent;
+}
+.rdp-cell:hover {
+  outline-color: var(--dark-color-600);
+  border-radius: 50%;
+}

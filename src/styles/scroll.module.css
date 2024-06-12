@@ -1,0 +1,60 @@
+.box {
+  display: grid;
+  place-content: center;
+  color: rgb(228, 225, 225);
+  text-shadow: 0 1px 0 #029bc5;
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #2f2e41,
+    #2f2e41 5%,
+    #2f2e41 60%,
+    #2f2e41 95%
+  );
+  border: solid 5px transparent;
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    #029bc5,
+    #029bc5 99%,
+    transparent
+  );
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  -webkit-animation: bg-spin 3s linear infinite;
+  animation: bg-spin 3s ease-in-out infinite;
+}
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
