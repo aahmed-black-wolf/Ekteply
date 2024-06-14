@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import fileIcon from "@/public/icons/files-save.svg";
-import smartIcom from "@/public/icons/ideas.svg";
-import rttIcon from "@/public/icons/rebuild-docs.svg";
-import clockIcon from "@/public/icons/time-save.svg";
+import fileIcon from '@/public/icons/files-save.svg';
+import smartIcom from '@/public/icons/ideas.svg';
+import rttIcon from '@/public/icons/rebuild-docs.svg';
+import clockIcon from '@/public/icons/time-save.svg';
 
-import Box from "./Box";
+import Box from './Box';
 
 export default function Boxes() {
   const boxesData = [
@@ -15,7 +15,7 @@ export default function Boxes() {
     { content: "توفير الوقت", icon: smartIcom },
   ];
   return (
-    <div className="flex flex-col lg:flex-row flex-wrap gap-[50px] justify-center items-center">
+    <div className="grid grid-cols-2 md:flex flex-col h-max p-3 md:h-[200px]  lg:flex-row flex-wrap gap-3 md:gap-[30px] lg:gap-[50px] justify-center items-center">
       {boxesData.map((data, index) => (
         <Box {...data} key={index} index={index} />
       ))}
