@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+"use client";
 
-import { useRouter } from "next/navigation";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { cn } from "@/src/libs/cn";
-import { Button } from "@nextui-org/react";
+import { useRouter } from 'next/navigation';
 
-import Animater from "../Animation/Animater";
-import List from "../interface/List";
-import Logo from "./Logo";
+import { cn } from '@/src/libs/cn';
+import { Button } from '@nextui-org/react';
+
+import Animater from '../Animation/Animater';
+import List from '../interface/List';
+import Logo from './Logo';
 
 export default function Header() {
   const [scrollStatus, setScrollStatus] = useState(false);

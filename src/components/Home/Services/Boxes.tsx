@@ -15,7 +15,7 @@ export default function Boxes() {
     { content: "توفير الوقت", icon: smartIcom },
   ];
   return (
-    <div className="grid grid-cols-2 md:flex flex-col h-max p-3 md:h-[200px]  lg:flex-row flex-wrap gap-3 md:gap-[30px] lg:gap-[50px] justify-center items-center">
+    <div className="flex h-max p-3 md:h-[200px] flex-wrap gap-3 md:gap-[30px] lg:gap-[50px] justify-center items-center">
       {boxesData.map((data, index) => (
         <Box {...data} key={index} index={index} />
       ))}

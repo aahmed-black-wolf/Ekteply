@@ -1,15 +1,16 @@
-import React from "react";
+"use client";
 
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import appStoreIcon from "@/public/icons/apple.svg";
-import creditCardIcon from "@/public/icons/credit-card.svg";
-import googleIcon from "@/public/icons/google-play.svg";
-import paypalIcon from "@/public/icons/paypal.svg";
-import visaIcon from "@/public/icons/visa.svg";
-import { Divider } from "@nextui-org/react";
+import appStoreIcon from '@/public/icons/apple.svg';
+import creditCardIcon from '@/public/icons/credit-card.svg';
+import googleIcon from '@/public/icons/google-play.svg';
+import paypalIcon from '@/public/icons/paypal.svg';
+import visaIcon from '@/public/icons/visa.svg';
+import { Divider } from '@nextui-org/react';
 
-import Logo from "./Logo";
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -46,10 +47,13 @@ export default function Footer() {
         <Logo />
       </div>
       <Divider className="bg-light-900" />
-      <div className="text-center text-[12px] md:text-[18px] text-light-700">
+      <Link
+        className="text-center w-full inline-block text-[12px] md:text-[18px] text-light-700"
+        href="/terms"
+      >
         Copyright © 2024 Ekteply | All Rights Reserved | Terms and Conditions |
         Privacy Policy
-      </div>
+      </Link>
     </div>
   );
 }

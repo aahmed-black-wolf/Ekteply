@@ -1,7 +1,9 @@
-import Image from "next/legacy/image";
-import { useRouter } from "next/navigation";
+"use client";
 
-import LogoIcon from "@/public/LOGO.svg";
+import Image from 'next/legacy/image';
+import { useRouter } from 'next/navigation';
+
+import LogoIcon from '@/public/LOGO.svg';
 
 type Props = {
   scrollStatus?: boolean;

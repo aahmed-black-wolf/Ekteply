@@ -14,8 +14,8 @@ export default function Box({ content, icon, index }: Props) {
     <div
       className={cn(
         "rounded-md flex h-full justify-center items-center bg-transparent  w-[160px]  md:w-[260px] shadow-medium lg:w-[300px]",
-        index === 2 && "scale-[1.1]  bg-main-900",
-        index === 1 && "scale-[1.1]  bg-main-900 md:bg-transparent"
+        index === 2 && "bg-main-900",
+        index === 1 && "bg-main-900 md:bg-transparent"
       )}
     >
       <div className="flex flex-col  justify-center  h-[150px] items-center gap-[30px] w-full  rounded-lg">
